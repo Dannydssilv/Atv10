@@ -1,347 +1,229 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #container {
-  width: 1000px;
-  margin: 0 auto;
+  width: 1000px; 
+  margin: 0 auto; 
 }
 
-#menu {
-    background-color: #fff; /* Fundo branco para o menu como na imagem */
-    padding: 25px; /* Padding geral para o menu container */
-    box-shadow: 0px 4px 3px -4px #000; /* Sombra inferior */
+#menu { 
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0px 4px 3px -4px #000;
 }
 
 #menu ul {
   list-style: none;
-  display: flex; /* Transforma em flexbox */
-  justify-content: space-between; /* Distribui os grupos de menu */
-  align-items: center; /* Alinha verticalmente os grupos */
-  padding: 0; /* Remove padding padrão da ul */
-  margin: 0; /* Remove margem padrão da ul */
-}
-
-#menu .menu-group {
-    display: flex; /* Faz com que os itens dentro de cada grupo fiquem em linha */
-    gap: 10px; /* Espaçamento entre os itens dentro de um grupo */
-}
-
-#menu .item {
-    /* Estilos base para os itens de lista, a serem sobrescritos por 'a' */
-    list-style: none; /* Garante que não haja marcadores de lista */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 #menu a {
-  background-color: #555;
+  background-color: #333;
   color: #fff;
   padding: 12px 35px;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
   font-size: 0.8rem;
-  display: block; /* Garante que o link ocupe todo o espaço do item */
+  display: block;
 }
 
 #menu a:hover {
-  background-color: #999;
+  background-color: #666;
 }
 
-#menu .item.active a {
-    background-color: #007bff; /* Cor para o item de menu ativo */
+.main-content-01 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 250px;
+  grid-template-rows: auto auto; 
+  gap: 0; 
 }
 
-#menu .item.dots {
-    background-color: #555; /* Cor de fundo para os três pontos */
-    color: #fff;
-    padding: 12px 15px; /* Padding ajustado para os três pontos */
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.2rem; /* Tamanho maior para os pontos */
-    line-height: 1; /* Alinhamento vertical dos pontos */
-    cursor: default; /* Indica que não é clicável */
+.cabecalho-01 {
+  background-color: #bcbcbc; 
+  padding: 30px; 
+  text-align: left;
+  grid-column: 1 / 3; 
+  grid-row: 1 / 2; 
+}
+
+.artigo-01 {
+  padding: 30px;
+  background-color: #a0a0a0; 
+  text-align: left;
+  min-height: 150px;
+}
+
+.artigo-01:nth-of-type(1) { 
+  grid-column: 1 / 2; 
+  grid-row: 2 / 3; 
+}
+
+.artigo-01:nth-of-type(2) { 
+  grid-column: 2 / 3; 
+  grid-row: 2 / 3; 
+}
+
+.menu-01 {
+  background-color: #777; 
+  padding: 30px;
+  grid-column: 3 / 4; 
+  grid-row: 1 / 3; 
+  text-align: left;
+}
+
+.rodape-01 {
+  background-color: #666; 
+  padding: 40px;
+  text-align: left;
+  color: #fff;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4; 
 }
 
 
-/* NÃO ALTERE DAQUI PRA CIMA */
-/* ESCREVA SEU CÓDIGO ABAIXO */
-
-body {
-    background-color: #f0f0f0;
-}
-
-#layout {
-    padding: 0;
-    background-color: #fff;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-/* Estilos para o Layout Principal (index.html) - SEM MUDANÇAS */
-.header, .footer {
-    background-color: #555;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 0;
+.header {
+  background-color: #777;
+  padding: 30px;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .main-content-index {
-    display: grid;
-    grid-template-columns: 200px 1fr 100px;
-    gap: 0px;
-    flex-grow: 1;
+  display: grid;
+  grid-template-columns: 200px 1fr 150px;
+  gap: 0;
 }
 
 .menu-lateral {
-    background-color: #777;
-    color: white;
-    padding: 15px;
+  background-color: #999;
+  padding: 20px;
+  text-align: left;
 }
 
 .menu-lateral ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
 }
 
 .menu-lateral li {
-    padding: 5px 0;
+  list-style: none;
+  background-color: #ccc;
+  padding: 5px 15px;
+  border-radius: 4px;
 }
 
 .content {
-    background-color: #999;
-    color: white;
-    padding: 15px;
+  background-color: #aaa;
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .ads {
-    background-color: #bbb;
-    color: white;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  background-color: #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-.ads div {
-    background-color: #ddd;
-    color: #333;
-    width: 80%;
-    text-align: center;
-    padding: 10px 0;
-    margin: 5px 0;
+.footer {
+  background-color: #666;
+  padding: 25px;
+  text-align: left;
+  color: white;
+  font-weight: bold;
 }
 
-/* Estilos para o Layout 02 (02.html) - SEM MUDANÇAS */
-.cabecalho-02 {
-    background-color: #666;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.main-content-02 {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    grid-template-rows: auto auto;
-    gap: 0px;
-    flex-grow: 1;
-}
-
-.artigo-02 {
-    background-color: #888;
-    color: white;
-    padding: 50px;
-    text-align: center;
-}
-
-.artigo-02:nth-child(1) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    background-color: #aaa;
-}
-
-.artigo-02:nth-child(2) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    background-color: #888;
-}
-
-.menu-02 {
-    background-color: #777;
-    color: white;
-    padding: 50px;
-    text-align: center;
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.rodape-02 {
-    background-color: #444;
-    color: white;
-    padding: 25px;
-    text-align: center;
-    margin-top: 0;
-    grid-column: 1 / -1;
-}
-
-/* Estilos para o Layout 03 (03.html) - SEM MUDANÇAS */
 .horizontal-menu-03 {
-    background-color: #666;
-    padding: 15px 0;
-    margin-bottom: 0;
+  background-color: #777;
+  padding: 15px 0;
+  margin: 10px 0;
 }
 
 .horizontal-menu-03 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .horizontal-menu-03 li {
-    padding: 5px 10px;
-    font-weight: bold;
+  padding: 10px 25px;
+  background-color: #999;
+  border-radius: 3px;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.horizontal-menu-03 li:hover {
+  background-color: #555;
+  color: #fff;
 }
 
 .cards-container-03 {
-    display: flex;
-    justify-content: space-around;
-    gap: 0px;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    align-items: stretch;
-    margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .card-03 {
-    background-color: #eee;
-    flex: 1;
-    min-width: 250px;
-    max-width: 30%;
-    display: flex;
-    flex-direction: column;
+  background-color: #ccc;
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #999;
 }
 
 .card-title-03 {
-    background-color: #555;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0;
+  background-color: #777;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .card-content-03 {
-    background-color: #ccc;
-    color: #333;
-    padding: 15px;
-    flex-grow: 1;
-    line-height: 1.5;
-    font-size: 0.9rem;
+  padding: 15px;
+  color: #000;
+  background-color: #ddd;
 }
 
 .footer-03 {
-    background-color: #555;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: auto;
+  background-color: #777;
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  color: white;
+  margin-top: 20px;
 }
 
 .footer-03 div {
-    padding: 5px 15px;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    #container {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    #menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #menu .menu-group {
-        flex-direction: column; /* Em telas menores, os grupos viram coluna */
-        align-items: center;
-        width: 100%; /* Ocupa a largura total */
-    }
-    #menu .item {
-        margin-bottom: 5px; /* Espaçamento entre itens quando empilhados */
-    }
-
-
-    .main-content-index {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-    .ads {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .ads div {
-        width: 45%;
-    }
-
-    .main-content-02 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-
-    .artigo-02:nth-child(1),
-    .artigo-02:nth-child(2),
-    .menu-02 {
-        grid-column: 1 / -1;
-        grid-row: auto;
-    }
-
-    .horizontal-menu-03 ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .cards-container-03 {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card-03 {
-        max-width: 90%;
-    }
-    .footer-03 {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    #menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    #menu .item {
-        width: 90%;
-        text-align: center;
-    }
-    #menu .item a {
-        display: block;
-    }
+  background-color: #999; 
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #666; 
 }
